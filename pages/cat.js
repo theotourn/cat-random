@@ -14,6 +14,7 @@ export async function getServerSideProps() {
 }
 
 export default function Cat({ data }) {
+  console.log(data);
   return (
     <div className={styles.container}>
       <h1>Cat API</h1>
@@ -21,10 +22,10 @@ export default function Cat({ data }) {
         <img src={data[0].url} alt="Cat" className={styles.image} />
       </div>
       <div className={styles.buttonContainer}>
-            <Link href="/cat">
-              <button className={styles.button}>Summon Another Cat</button>
-            </Link>
-          </div>
+        <Link href="/cat">
+          <button className={styles.button}>Summon Another Cat</button>
+        </Link>
+      </div>
     </div>
   );
 }
